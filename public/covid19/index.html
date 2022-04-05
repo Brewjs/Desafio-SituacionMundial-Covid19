@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Boostrap-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
         integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
     <title>Situacion Mundial COVID-19</title>
@@ -12,45 +13,49 @@
 
 <body>
 
-    <section>
-        <div class="container">
-            <div class="row justify-content-center align-items-center p-5">
-                <div class="col-md-12">
-                    <h3 class="text-center">
-                        Ingreso de Usuario
-                    </h3>
-                </div>
-                <br>
-                <div class="col-md-6 d-block">
-                    <form id="frmLogin">
-                        <div class="form-group">
-                            <label for="txtEmail">Email address</label>
-                            <input type="email" class="form-control" id="txtEmail" aria-describedby="emailHelp">
-                        </div>
-                        <div class="form-group">
-                            <label for="txtPassword">Password</label>
-                            <input type="password" id="txtPassword" class="form-control">
-                        </div>
-                        <button type="submit" class="btn btn-primary">Entrar</button>
-                    </form>
-                </div>
-    </section>
+    <nav class="fixed-top navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Covid 19</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Iniciar sesión</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
-    <div id='datos' class='d-flex flex-column justify-content-center align-items-center p-5 hidden'>
+<main class="container mt-5">
+    <section id="grafico" class="py-5">
+        <div id="graficoCovidTotal" style="height: 370px; width: 100%;"></div>
+    </section>
+</main>
+
+
+    <!-- <div id='datos' class='d-flex flex-column justify-content-center align-items-center p-5 hidden'>
         <div id="chartContainer" class='m-3' style="height: 300px; width: 90%;"></div>
         </br>
         <!--Información Detallada -->
-        <table id='tabla' class='table table-sm m-3'></table>
+        <table id='tabla' class='table table-sm m-3'>
+        </table>
     </div>
-
+ -->
     <section>
         <!-- Modal -->
-        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
-            aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+            aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered" role="document">
                 <div class="modal-content" style="height: 400px; width: 800px">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+                        <h5 class="modal-title" id="exampleModalLongTitle">Situación por País</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
@@ -67,17 +72,19 @@
     </section>
 
 
-
+    <!--Jquery-->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
         integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
         crossorigin="anonymous"></script>
+    <!--JS Boostrap-->
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
         integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
         crossorigin="anonymous"></script>
+    <!--JS Canvas-->
     <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
-    <script src="./assets/scripts.js"></script>
+    <script src="assets/scripts.js"></script>
 
 </body>
 
